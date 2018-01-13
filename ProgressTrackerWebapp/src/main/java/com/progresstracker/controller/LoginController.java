@@ -38,7 +38,6 @@ public class LoginController {
 		System.out.println("does result have errors? : " + result.hasErrors());
 		
 		if (result.hasErrors()) {
-			
 			return "createAccount";
 		} else {
 			return "redirect:login.html";
