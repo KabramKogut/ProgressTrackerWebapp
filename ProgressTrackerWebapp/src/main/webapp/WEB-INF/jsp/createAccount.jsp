@@ -22,7 +22,7 @@
 	
 	
 	<body>
-		<div class="container" ng-app="createAccount">
+		<div class="container" ng-app="Account">
 			<div class="col-xs-2"></div>
 			<div class="col-xs-8 main" ng-controller="createAccountCtrl">
 			

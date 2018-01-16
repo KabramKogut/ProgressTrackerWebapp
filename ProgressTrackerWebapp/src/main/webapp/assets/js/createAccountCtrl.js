@@ -1,7 +1,7 @@
-var app = angular.module('createAccount', [] );
+var app = angular.module('Account', [] );
 
 var createAccountController = function($scope) {
-	$scope.firstName = "John";
+	$scope.firstName = "Johns";
 	$scope.lastName = "Doe";
 	$scope.sex = ["Man","Woman"];
 	$scope.somatotype = ["Ectomorphs","Endomorphs", "Mesomorphs"]
