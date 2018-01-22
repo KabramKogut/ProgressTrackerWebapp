@@ -38,6 +38,14 @@ td {
 	position: relative;
 	display: inline;
 }
+select {
+	color: darkcyan;
+	font-weight:bold;
+	width:100%;
+}
+input[type="text"] {
+	color: darkcyan;
+}
 
 .error {
 	color: #ff0000;
