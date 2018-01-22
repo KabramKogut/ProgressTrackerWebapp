@@ -14,12 +14,12 @@
 			<%@include file="/assets/css/createaccount.css"%>
 			
 		</style>
+    
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="<c:url value="/assets/js/createAccountCtrl.js"/>"></script>
-		
+
 		<title>Create Account</title>
 	</head>
-	
 	
 	<body>
 		<div class="container" ng-app="Account">
@@ -28,44 +28,43 @@
 			
 			<h1>Create Account</h1>
 				<form:form commandName="userProfile">
-					<form:errors path="*" cssClass="errorblock" />
 					<table>
 						<tr>
 							<td>User name: </td>
-							<td><form:input path="username" ng-model="firstName"/></td>
+							<td><form:input path="username" ng-model="firstName" id="username"/></td>
 							<td><form:errors path="username" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Password: </td>
-							<td><form:input type="password"  path="password"/></td>
+							<td><form:input type="password"  path="password" id="password"/></td>
 							<td><form:errors path="password" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Email: </td>
-							<td><form:input type="email" path="email"/></td>
+							<td><form:input type="email" path="email" id="email"/></td>
 							<td><form:errors path="email" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Name: </td>
-							<td><form:input path="name"/></td>
+							<td><form:input path="name" id="name"/></td>
 							<td><form:errors path="name" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Surname: </td>
-							<td><form:input path="surname" ng-model="lastName"/></td>
+							<td><form:input path="surname" ng-model="lastName" id="surname"/></td>
 							<td><form:errors path="surname" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Sex: </td>
 							<td>
-								<form:select path="sex"  ng-model="sexDropDown" ng-options="x for x in sex">
+								<form:select path="sex"  ng-model="sexDropDown" ng-options="x for x in sex" id="sex">
 								</form:select>
 							</td>
 							<td><form:errors path="sex" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Age: </td>
-							<td><form:select path="age" ng-model="ageDropDown" >
+							<td><form:select path="age" ng-model="ageDropDown" id="age" >
 								<option ng-repeat="n in [] | range:1:121 ">{{n}}</option>
 								</form:select>
 							</td>
@@ -73,30 +72,29 @@
 						</tr>
 						<tr>
 							<td>Height: </td>
-							<td><form:input path="height"/></td>
+							<td><form:input path="height" id="height"/></td>
 							<td><form:errors path="height" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Weight: </td>
-							<td><form:input path="weight"/></td>
+							<td><form:input path="weight" id="weight"/></td>
 							<td><form:errors path="weight" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Somatotype: </td>
-							<td><form:select path="somatotype" ng-model="somatotypeDropDown" ng-options="x for x in somatotype">
-								
+							<td><form:select path="somatotype" ng-model="somatotypeDropDown" ng-options="x for x in somatotype" id="somatotype">
 								</form:select>							
 							</td>
 							<td><form:errors path="somatotype" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Lifestyle: </td>
-							<td><form:input path="lifestyle"/></td>
+							<td><form:input path="lifestyle" id="lifestyle"/></td>
 							<td><form:errors path="lifestyle" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Goal: </td>
-							<td><form:input path="goal"/></td>
+							<td><form:input path="goal" id="goal"/></td>
 							<td><form:errors path="goal" cssClass="error" /></td>
 						</tr>
 						<tr class="btnSubmit row ">

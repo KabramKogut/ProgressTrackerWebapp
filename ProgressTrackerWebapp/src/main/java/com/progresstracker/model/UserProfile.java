@@ -1,28 +1,34 @@
 package com.progresstracker.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
 
 @Entity
-public class UserProfile {
+@Table(name="users")
+public class UserProfile  {
 
-	@Id
-	@NotNull(message = "Username can't be empty")
+	@Id 
+	@NotEmpty(message = "Username can not be empty")
 	private String username;
-	@NotNull(message = "Password can't be empty")
+	@NotEmpty(message = "Password can not be empty")
 	private String password;
-	@NotNull
-	@Email(message = "Email can't be empty")
+	@NotEmpty
+	@Email(message = "Email can not be empty")
 	private String email;
-	@NotNull(message = "Name can't be empty")
+	@NotEmpty(message = "Name can not be empty")
 	private String name;
-	@NotNull(message = "Surname can't be empty")
+	@NotEmpty(message = "Surname can not be empty")
 	private String surname;
-	@NotNull(message = "Sex can't be empty")
+	@NotEmpty(message = "Sex can not be empty")
 	private String sex;
 	@Range(min = 15, max = 100, message = "Age must be between 15 and 100")
 	private int age;
@@ -30,12 +36,32 @@ public class UserProfile {
 	private int height;
 	@Range(min = 40, max = 300, message = "Weight must be between 40 and 300")
 	private int weight;
-	@NotNull(message = "Somatotype can't be empty")
+	@NotEmpty(message = "Somatotype can not be empty")
 	private String somatotype;
 	@Range(min = 0, max = 5, message = "Lifestyle must be between 0 and 5")
 	private int lifestyle;
-	@NotNull(message = "Goal can't be empty")
+	@NotEmpty(message = "Goal can not be empty")
 	private String goal;
+	private boolean enabled;
+	
+	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
+	private List<Authority> authorities;
+
+	public List<Authority> getAuthorities() {
+		return authorities;
+	}
+
+	public void setAuthorities(List<Authority> authorities) {
+		this.authorities = authorities;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 
 	public String getUsername() {
 		return username;
@@ -133,4 +159,5 @@ public class UserProfile {
 		this.goal = goal;
 	}
 
+	
 }
