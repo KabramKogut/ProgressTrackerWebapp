@@ -14,11 +14,8 @@
 			<%@include file="/assets/css/bootstrap.min.css"%>
 		</style>
 		
-		<script src="<c:url value="/assets/js/jsTest.js"/>"></script>
-		
 		<title>Create Account</title>
 	</head>
-	
 	
 	<body>
 		<div class="container">
@@ -27,66 +24,65 @@
 			
 			<h1>Create Account</h1>
 				<form:form commandName="userProfile">
-					<form:errors path="*" cssClass="errorblock" />
 					<table>
 						<tr>
 							<td>User name: </td>
-							<td><form:input path="username"/></td>
+							<td><form:input path="username" id="username"/></td>
 							<td><form:errors path="username" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Password: </td>
-							<td><form:input path="password"/></td>
+							<td><form:input path="password" id="password" /></td>
 							<td><form:errors path="password" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Email: </td>
-							<td><form:input path="email"/></td>
+							<td><form:input path="email" id="email"/></td>
 							<td><form:errors path="email" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Name: </td>
-							<td><form:input path="name"/></td>
+							<td><form:input path="name" id="name"/></td>
 							<td><form:errors path="name" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Surname: </td>
-							<td><form:input path="surname"/></td>
+							<td><form:input path="surname" id="surname"/></td>
 							<td><form:errors path="surname" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Sex: </td>
-							<td><form:input path="sex"/></td>
+							<td><form:input path="sex" id="sex" /></td>
 							<td><form:errors path="sex" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Age: </td>
-							<td><form:input path="age"/></td>
+							<td><form:input path="age" id="age"/></td>
 							<td><form:errors path="age" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Height: </td>
-							<td><form:input path="height"/></td>
+							<td><form:input path="height" id="height"/></td>
 							<td><form:errors path="height" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Weight: </td>
-							<td><form:input path="weight"/></td>
+							<td><form:input path="weight" id="weight"/></td>
 							<td><form:errors path="weight" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Somatotype: </td>
-							<td><form:input path="somatotype"/></td>
+							<td><form:input path="somatotype" id="somatotype"/></td>
 							<td><form:errors path="somatotype" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Lifestyle: </td>
-							<td><form:input path="lifestyle"/></td>
+							<td><form:input path="lifestyle" id="lifestyle"/></td>
 							<td><form:errors path="lifestyle" cssClass="error" /></td>
 						</tr>
 						<tr>
 							<td>Goal: </td>
-							<td><form:input path="goal"/></td>
+							<td><form:input path="goal" id="goal"/></td>
 							<td><form:errors path="goal" cssClass="error" /></td>
 						</tr>
 						<tr class="btnSubmit row ">

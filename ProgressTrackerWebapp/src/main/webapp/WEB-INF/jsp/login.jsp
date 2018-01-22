@@ -24,6 +24,16 @@
 			Caused by: ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
 		</div>
 	</c:if>
+	<c:if test="${not empty accCreated}">
+		<div class="errorblock">
+			Your account was created successfully. You can now log in. <br/>
+		</div>
+	</c:if>
+	<c:if test="${not empty accNotCreated}">
+		<div class="errorblock">
+			Something went wrong during account creation. Try again. <br/>
+		</div>
+	</c:if>
 	
 	<form action="login" name="f" method="POST">
 		<table>
