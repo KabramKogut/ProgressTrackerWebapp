@@ -35,11 +35,11 @@ public class CreateAccount {
 		email.sendKeys("asdas@gmail.com");
 		name.sendKeys("name");
 		surname.sendKeys("lastname");
-		sex.sendKeys("male");
+		sex.sendKeys("Man");
 		age.sendKeys("21");
 		height.sendKeys("176");
 		weight.sendKeys("65");
-		somatotype.sendKeys("ecto");
+		somatotype.sendKeys("Ectomorphs");
 		lifestyle.sendKeys("2");
 		goal.sendKeys("lose");
 		
